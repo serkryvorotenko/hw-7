@@ -22,7 +22,7 @@ const verifyNumbers = (source) => {
     let result = [];
 
     for (let i = 0; i < source.length; i++) {
-        if (!isNaN(source[i])) {
+        if (!isNaN(source[i]) && source[i] !== null) {
             result[result.length] = source[i];
         }
     }
@@ -61,9 +61,9 @@ console.log(utils.reverse('кобан упал и лапу набок'));
 
 console.log(utils.reverse([1, 2, 3, 345,]));
 
-console.log(utils.getMin([1, 23, 45, -3, 456, 46]));
+console.log(utils.getMin([1, 23, 45, -3, 456, 46, null]));
 
-console.log(utils.verifyNumbers(['hello', 34, 1, 4, 5, 89, undefined]));
+console.log(utils.verifyNumbers(['hello', 34, 1, 4, 5, 89, undefined, null]));
 
 console.log(utils.getAverage([23, 45, 65, 2, 3, 0, 1, 45, 9, 0, 6, 5, 43]));
 
